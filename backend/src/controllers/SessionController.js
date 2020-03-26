@@ -7,9 +7,9 @@ module.exports = {
         const ong = await connection('ongs').where('id', id).select('name').first();
 
         if (!ong) {
-            return response.staus(400).json({ error: 'ONG not found!' });
+            return response.status(400).json({ error: 'ONG not found!' });
         }
 
-        return response.json(name);
+        return response.json(ong);
     }
 }
